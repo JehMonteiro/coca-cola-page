@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coca Cola Website Landing Page</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="image/logo.png" class="logo"> </a>
+
+            <div class="toggle" onclick="toggleMenu()"></div>
+
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Novidades</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Surpreenda-se</h2>
+                <p>A Coca-Cola Company está atualizando o visual de algumas das suas bebidas com sabor. Novas versões da
+                    Coca-Cola com sabor de cereja agora terão latas magenta, com o logotipo em branco na bebida normal e
+                    preto na sem açúcar. E para quem está curioso com o novo sabor, a Coca-Cola preparou uma Coffee Coke
+                    com sabor de Mocha, que chegará em fevereiro. Ela se junta à linha de sabores existente, que inclui
+                    Dark Blend, Vanilla e Caramel. </p>
+
+                <a href="#">Saiba mais</a>
+            </div>
+
+            <div class="imgBox">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="image/cocacola1.png"></div>
+                        <div class="swiper-slide"><img src="image/cocacola2.png"></div>
+                        <div class="swiper-slide"><img src="image/cocacola3.png"></div>
+                        <div class="swiper-slide"><img src="image/cocacola4.png"></div>
+                        <div class="swiper-slide"><img src="image/cocacola5.png"></div>
+                        <div class="swiper-slide"><img src="image/cocacola6.png"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <ul class="sci">
+            <li><a href="#"><img src="image/facebook.png"></a></li>
+            <li><a href="#"><img src="image/twitter.png"></a></li>
+            <li><a href="#"><img src="image/instagram.png"></a></li>
+        </ul>
+    </section>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+          loop: true,
+        });
+
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.toggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+
+
+      </script>
+</body>
+
+</html>
